@@ -1,27 +1,13 @@
-import React, { useState } from "react";
-import Entrada from "./components/entradas";
-import Resultado from "./components/result";
-import "./App.css";
-import reactLogo from "./logo.svg"; 
+import CharacterList from "./components/ListaPersonajes";
 
-const App: React.FC = () => {
-  const [parrafo, setParrafo] = useState("");
-  const [palabra, setPalabra] = useState("");
 
-  const handleSearch = (nuevoParrafo: string, nuevaPalabra: string) => {
-    setParrafo(nuevoParrafo);
-    setPalabra(nuevaPalabra);
-  };
-
+function App() {
   return (
-   <div>
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        <img src={reactLogo}  style={{ width: "100px" }} />
-      </div>
-      <Entrada onSearch={handleSearch} />
-      <Resultado parrafo={parrafo} palabra={palabra} />
+    <div>
+     
+      <CharacterList />
     </div>
   );
-};
+}
 
 export default App;
